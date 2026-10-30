@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U07 圖解教學</title>
+<style>
+:root{--bg:#f6f3ee;--card:#fff;--ink:#1f2430;--sub:#5b6472;--line:#e3e6ec;--acc:#e2551f;--accs:#fdeee6;--teal:#0f766e;--teals:#e6f6f4;--navy:#1e3a8a;--warn:#b45309;--warns:#fff6e5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 "Noto Sans TC","Microsoft JhengHei",sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 80px}
+header{background:var(--ink);color:#fff;padding:28px 0 24px}
+header .wrap{padding-bottom:0}
+header .k{display:inline-block;background:var(--acc);border-radius:8px;padding:2px 12px;font-weight:700;font-size:14px;letter-spacing:2px}
+header h1{margin:10px 0 6px;font-size:clamp(26px,5vw,40px);line-height:1.3}
+header p{margin:0;color:#d7dbe3}
+header .links{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+header .links a{color:#fff;border:1.5px solid #ffffff66;border-radius:10px;padding:6px 14px;text-decoration:none;font-weight:700;font-size:15px}
+nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:22px 0}
+nav.toc b{display:block;margin-bottom:6px}
+nav.toc ol{margin:0;padding-left:22px}
+nav.toc a{color:var(--ink);text-decoration:none}
+nav.toc a:hover{color:var(--acc)}
+h2{margin:44px 0 6px;font-size:clamp(22px,4vw,28px);display:flex;align-items:center;gap:10px;scroll-margin-top:12px}
+h2 .p{background:var(--acc);color:#fff;border-radius:10px;padding:2px 12px;font-size:.8em}
+.lead{color:var(--sub);margin:0 0 14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0;display:grid;grid-template-columns:44px 1fr;gap:4px 14px}
+.step .n{width:40px;height:40px;border-radius:50%;background:var(--acc);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h3{margin:4px 0 4px;font-size:19px}
+.step .b{grid-column:2}
+.step img{cursor:zoom-in;width:100%;border:1px solid var(--line);border-radius:10px;margin-top:10px;display:block}
+.step p{margin:4px 0}
+@media (max-width:600px){.step{grid-template-columns:1fr}.step .b{grid-column:1}}
+.kbd{display:inline-block;background:#eef0f4;border:1px solid #d5d9e0;border-radius:6px;padding:0 7px;font:600 .92em Consolas,"Noto Sans TC",monospace}
+pre{background:#1f2430;color:#ffe08a;border-radius:10px;padding:12px 14px;white-space:pre-wrap;word-break:break-all;font:15px/1.6 Consolas,monospace;margin:8px 0;position:relative}
+.cp{position:absolute;top:8px;right:8px;background:#ffe08a;color:#1f2430;border:0;border-radius:8px;padding:4px 10px;font:700 13px "Noto Sans TC",sans-serif;cursor:pointer}
+.note{border-radius:12px;padding:12px 16px;margin:12px 0;border-left:5px solid}
+.note.tip{background:var(--teals);border-color:var(--teal)}
+.note.warn{background:var(--warns);border-color:var(--warn)}
+.note.key{background:var(--accs);border-color:var(--acc)}
+.note b.h{display:block}
+.tree{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font:15px/1.7 Consolas,"Noto Sans TC",monospace;white-space:pre;overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;margin:10px 0}
+td,th{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#f0ece5}
+.btn{display:inline-block;background:var(--acc);color:#fff;border-radius:10px;padding:6px 14px;text-decoration:none;font-weight:700;margin:6px 6px 0 0}
+.btn.g{background:#2e7d32}
+footer{color:var(--sub);font-size:14px;text-align:center;margin-top:40px}
+#zoom{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;z-index:9;cursor:zoom-out}#zoom img{max-width:96vw;max-height:94vh;border-radius:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div style="background:linear-gradient(90deg, #e8531f, #f59e0b);color:#fff;text-align:center;padding:6px;font-weight:700;font-size:14px;margin-bottom:14px;border-radius:8px;">💡 來自亮亮老師1151030</div>
+  <span class="k">UNIT 07 · 圖解教學</span>
+  <h1>U07 第二次更新｜圖解教學</h1>
+  <p>造島工坊、Codex 與第 2 版網站的真實畫面，橘框是要按的地方。</p>
+  <div class="links"><a href="../../video/U07.mp4" target="_blank" rel="noopener">🎬 看教學影片</a><a href="../../reader.html?u=U07">📖 翻開電子書</a><a href="../../index.html">← 回課程首頁</a></div>
+</div></header>
+<div class="wrap">
+<nav class="toc"><b>目錄（照順序做）</b><ol><li><a href="#A">A 把上一版放回造島工坊</a></li><li><a href="#B">B 在表單裡改</a></li><li><a href="#C">C 下載第 2 版、交給 Codex</a></li><li><a href="#D">D 更新到同一個網址</a></li><li><a href="#E">E 下次怎麼再打開、再更新</a></li></ol></nav>
+<h2 id="A"><span class="p">A</span>A 把上一版放回造島工坊</h2>
+<p class="lead">先把 U06 做好的整個資料夾（含 site/、部署紀錄.md）按右鍵壓縮成 zip。</p>
+<div class="step"><div class="n">1</div><div class="b"><h3>按「更新已做好的島」</h3><p>打開 isleforge-tw.netlify.app，首頁按「🔄 更新已做好的島」。</p><img src="img/a1.jpg" alt="按「更新已做好的島」" loading="lazy"></div></div>
+<div class="step"><div class="n">2</div><div class="b"><h3>放入 zip</h3><p>選剛剛壓縮的 zip，或直接拖進來。</p><img src="img/a2.jpg" alt="放入 zip" loading="lazy"></div></div>
+<div class="step"><div class="n">3</div><div class="b"><h3>確認讀到的內容</h3><p>有 site/、有部署紀錄，都是綠勾勾，按「開始更新」。</p><img src="img/a3.jpg" alt="確認讀到的內容" loading="lazy"></div></div>
+<h2 id="B"><span class="p">B</span>B 在表單裡改</h2>
+<p class="lead">上方會顯示「更新模式：第 1 版 → 第 2 版」。</p>
+<div class="step"><div class="n">1</div><div class="b"><h3>加一座島</h3><p>步驟 3 按「＋ 新增一座島」，填名稱、一句介紹，按「更多」寫內容重點。</p><img src="img/b1.jpg" alt="加一座島" loading="lazy"></div></div>
+<div class="step"><div class="n">2</div><div class="b"><h3>加點綴</h3><p>步驟 5「地景點綴」勾彩旗串、噴泉廣場。</p><img src="img/b2.jpg" alt="加點綴" loading="lazy"></div></div>
+<div class="step"><div class="n">3</div><div class="b"><h3>寫更新說明</h3><p>步驟 6 勾更新種類、寫下「這次要更新什麼」；下方會列出自動比對的變更。</p><img src="img/b3.jpg" alt="寫更新說明" loading="lazy"></div></div>
+<h2 id="C"><span class="p">C</span>C 下載第 2 版、交給 Codex</h2>
+<p class="lead">更新包解壓縮後，在 Codex 建新專案、選這個資料夾。</p>
+<div class="step"><div class="n">1</div><div class="b"><h3>下載更新包、複製指令</h3><p>按「下載第 2 版更新包」，再按「複製給 AI 的指令」。</p><img src="img/c1.jpg" alt="下載更新包、複製指令" loading="lazy"></div></div>
+<div class="step"><div class="n">2</div><div class="b"><h3>貼上指令、回答確認</h3><p>貼上、送出；它會先列變更表、問 1～2 個問題。回覆：「1 同意、2 同意，可以，直接做。全部測試通過後先停下來回報，不要部署。」</p><div class="note note">畫面上回覆開頭多一個「ˋ」，是錄製時老師的鍵盤輸入誤入；你照資源下載的文字貼就好。</div><img src="img/c2.jpg" alt="貼上指令、回答確認" loading="lazy"></div></div>
+<div class="step"><div class="n">3</div><div class="b"><h3>完成回報</h3><p>約 14 分鐘：231 項本機檢查通過，舊存檔與接關碼相容，沒有自己部署。</p><img src="img/c3.jpg" alt="完成回報" loading="lazy"></div></div>
+<h2 id="D"><span class="p">D</span>D 更新到同一個網址</h2>
+<p class="lead">部署 site/ 到原本的網站（看部署紀錄.md）。</p>
+<pre>npx --yes netlify-cli deploy --dir site --prod</pre><p>第一次在這個資料夾部署會問要連哪個網站——選 U06 那一個。</p>
+<div class="step"><div class="n">2</div><div class="b"><h3>第 2 版上線</h3><p>同一個網址：多了 AI 動畫島、彩旗與噴泉。</p><img src="img/d2.jpg" alt="第 2 版上線" loading="lazy"></div></div>
+<div class="step"><div class="n">3</div><div class="b"><h3>課程清單</h3><p>六座島都在；學生原本的島章與學習單保留。</p><img src="img/d3.jpg" alt="課程清單" loading="lazy"></div></div>
+<h2 id="E"><span class="p">E</span>E 下次怎麼再打開、再更新</h2>
+<p>本機：雙擊資料夾裡的 <b>啟動網站.cmd</b>；線上：直接開原本的網址。</p>
+<p>把這次的資料夾再壓成 zip → 造島工坊「更新已做好的島」→ 下載第 3 版 → 交給 Codex。每一版的變更都記在 CHANGELOG.md。</p>
+<footer>阿亮老師 · 我要當島主！從零開始，造島成真 · 圖片皆為 2026-10-16 真實操作畫面（畫面上的箭頭指標與編號框是後製標示）</footer>
+</div>
+<div id="zoom" onclick="this.style.display='none'"><img alt=""></div>
+<script>
+document.querySelectorAll('.step img').forEach(i => i.onclick = () => { const z = document.getElementById('zoom'); z.querySelector('img').src = i.src; z.style.display = 'flex'; });
+document.querySelectorAll('pre').forEach(p => { const b = document.createElement('button'); b.className = 'cp'; b.textContent = '複製';
+  b.onclick = () => { navigator.clipboard.writeText(p.innerText.replace(/複製$/, '').trim()); b.textContent = '已複製'; setTimeout(() => b.textContent = '複製', 1500); }; p.appendChild(b); });
+</script>
+</body>
+</html>
